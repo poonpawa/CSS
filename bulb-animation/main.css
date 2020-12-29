@@ -1,0 +1,85 @@
+* {
+    margin: 40 0 0 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+}
+
+#bulb-hold1 {
+    animation: light 1s cubic-bezier(0.72, 0.08, 1, 0.68) forwards;
+}
+
+#bulb-hold2 {
+    animation: light 0.5s cubic-bezier(0.72, 0.08, 1, 0.68) forwards;
+}
+
+@keyframes light {
+    from {
+        fill: rgb(108, 99, 255);
+    }
+    to {
+        fill: yellow;
+    }
+}
+
+@keyframes light-rays {
+    to {
+        fill: yellow;
+    }
+}
+
+@keyframes filament {
+    to {
+        fill: rgb(63, 61, 86);
+    }
+}
+
+#filament path {
+    animation: filament 0.1s cubic-bezier(0.72, 0.08, 1, 0.68) forwards;
+    animation-delay: 2s;
+}
+
+#bulb-main {
+    animation: lightUp 1.5s ease-out forwards;
+    animation-delay: 1s;
+}
+
+#bulb-rays path:nth-child(3) {
+    animation: light-rays 0.3s ease-out forwards;
+    animation-delay: 2.3s;
+}
+
+#bulb-rays path:first-child,
+#bulb-rays path:nth-child(2) {
+    animation: light-rays 0.3s ease-out forwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes lightUp {
+    0% {
+        fill: rgb(108, 99, 255);
+    }
+    2% {
+        fill: yellow;
+    }
+    5% {
+        fill: rgb(108, 99, 255);
+    }
+    10% {
+        fill: yellow;
+    }
+    20% {
+        fill: rgb(108, 99, 255);
+    }
+    35% {
+        fill: yellow;
+    }
+    60% {
+        fill: rgb(108, 99, 255);
+    }
+    100% {
+        fill: yellow;
+    }
+}
