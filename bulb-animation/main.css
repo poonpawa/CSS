@@ -58,27 +58,15 @@ body {
 }
 
 @keyframes lightUp {
-    0% {
-        fill: rgb(108, 99, 255);
-    }
-    2% {
-        fill: yellow;
-    }
-    5% {
-        fill: rgb(108, 99, 255);
-    }
-    10% {
-        fill: yellow;
-    }
-    20% {
-        fill: rgb(108, 99, 255);
-    }
-    35% {
-        fill: yellow;
-    }
+    0%,
+    5%,
+    20%,
     60% {
         fill: rgb(108, 99, 255);
     }
+    2%,
+    10%,
+    35%,
     100% {
         fill: yellow;
     }
